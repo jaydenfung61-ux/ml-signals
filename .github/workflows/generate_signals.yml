@@ -1,0 +1,33 @@
+name: Generate ML Signals
+
+on:
+  schedule:
+    - cron: '30 13 * * 1-5'   # 9:30 AM EDT (13:30 UTC) weekdays
+  workflow_dispatch:            # manual trigger from GitHub UI
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance numpy pytz
+
+      - name: Generate signals
+        run: python scripts/generate_signals.py
+
+      - name: Commit and push updated signals
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/ml_signals.pine output/signals.json
+          git diff --cached --quiet || git commit -m "ML signals $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
