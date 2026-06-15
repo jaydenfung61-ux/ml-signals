@@ -1,0 +1,53 @@
+{
+  "date": "2026-06-15",
+  "signals": [
+    {
+      "label": "SPY",
+      "price": 754.8300170898438,
+      "chg": 1.7633996750716197,
+      "bias": "BULL",
+      "conf": 99,
+      "iv": 16.2,
+      "ivr": 5,
+      "strategy": "Bull Call Spread",
+      "strikes": "$756C / $801C",
+      "expiry": "Jul 3"
+    },
+    {
+      "label": "QQQ",
+      "price": 744.0,
+      "chg": 3.141371932916659,
+      "bias": "BULL",
+      "conf": 99,
+      "iv": 16.2,
+      "ivr": 5,
+      "strategy": "Bull Call Spread",
+      "strikes": "$745C / $789C",
+      "expiry": "Jul 3"
+    },
+    {
+      "label": "DJX (DIA)",
+      "price": 518.4400024414062,
+      "chg": 1.0486112556842064,
+      "bias": "BULL",
+      "conf": 99,
+      "iv": 16.2,
+      "ivr": 5,
+      "strategy": "Bull Call Spread",
+      "strikes": "$519C / $550C",
+      "expiry": "Jul 3"
+    },
+    {
+      "label": "MRUT (IWM)",
+      "price": 294.6400146484375,
+      "chg": 0.5768910636576141,
+      "bias": "BULL",
+      "conf": 99,
+      "iv": 16.2,
+      "ivr": 5,
+      "strategy": "Bull Call Spread",
+      "strikes": "$295C / $312C",
+      "expiry": "Jul 3"
+    }
+  ]
+}
