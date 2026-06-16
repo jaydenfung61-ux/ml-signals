@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '30 13 * * 1-5'   # 9:30 AM EDT (13:30 UTC) weekdays
     - cron: '30 18 * * 1-5'   # 2:30 PM EDT (18:30 UTC) weekdays
+    - cron: '05 20 * * 1-5'   # 4:05 PM EDT (20:05 UTC) weekdays — end of day
   workflow_dispatch:            # manual trigger from GitHub UI
 
 permissions:
