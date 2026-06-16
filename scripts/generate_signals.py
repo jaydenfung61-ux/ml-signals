@@ -143,38 +143,44 @@ def select_strategy(bias, ivr, iv_pct):
         return "Bear Call Spread" if ivr >= 50 else "Bear Put Spread"
 
 
-def select_strikes(price, strategy, iv_pct):
+def select_strikes(price, strategy, hv_pct):
     """
-    Strike width based on 1 SD move over DTE.
-    Labels show B (Buy leg) / S (Sell leg) for clarity.
+    Strike selection scaled to each ETF's own volatility over DTE.
+
+    Short strike: ~0.5 SD OTM (approx 30-delta)
+    Spread width: ~0.4 SD, rounded to nearest $5, capped at 5% of price
+    This keeps QQQ/IWM strikes proportional to their higher HV vs SPY/DIA.
     """
-    daily_sd = price * (iv_pct / 100) / np.sqrt(252)
-    width = round(daily_sd * np.sqrt(EXPIRY_DAYS_TARGET) * 1.5, 0)
-    width = max(width, price * 0.02)   # minimum 2% width
+    sd_move = price * (hv_pct / 100) * np.sqrt(EXPIRY_DAYS_TARGET / 252)
 
-    if strategy == "Bull Call Spread":
-        # Buy lower ATM call, Sell higher OTM call
-        buy_strike  = round(price * 1.001, 0)
-        sell_strike = round(buy_strike + width, 0)
-        return f"B${int(buy_strike)}C / S${int(sell_strike)}C"
+    # Width: 0.4 SD, rounded to $5 increments, min $5, max 5% of price
+    raw_width = sd_move * 0.4
+    width = max(5.0, min(price * 0.05, raw_width))
+    width = round(width / 5) * 5
+    width = max(5, width)
 
-    elif strategy == "Bull Put Spread":
-        # Sell higher OTM put, Buy lower put for protection
-        sell_strike = round(price * 0.985, 0)
-        buy_strike  = round(sell_strike - width, 0)
-        return f"S${int(sell_strike)}P / B${int(buy_strike)}P"
+    # Short strike distance: 0.5 SD OTM (≈30 delta), min 1% of price
+    otm = max(round(sd_move * 0.5), round(price * 0.01))
+
+    if strategy == "Bull Put Spread":
+        sell = round(price - otm)
+        buy  = round(sell - width)
+        return f"S${int(sell)}P / B${int(buy)}P"
+
+    elif strategy == "Bull Call Spread":
+        buy  = round(price)
+        sell = round(buy + otm + width * 0.5)
+        return f"B${int(buy)}C / S${int(sell)}C"
 
     elif strategy == "Bear Put Spread":
-        # Buy higher ATM put, Sell lower OTM put
-        buy_strike  = round(price * 0.999, 0)
-        sell_strike = round(buy_strike - width, 0)
-        return f"B${int(buy_strike)}P / S${int(sell_strike)}P"
+        buy  = round(price)
+        sell = round(buy - otm - width * 0.5)
+        return f"B${int(buy)}P / S${int(sell)}P"
 
     else:  # Bear Call Spread
-        # Sell lower OTM call, Buy higher call for protection
-        sell_strike = round(price * 1.015, 0)
-        buy_strike  = round(sell_strike + width, 0)
-        return f"S${int(sell_strike)}C / B${int(buy_strike)}C"
+        sell = round(price + otm)
+        buy  = round(sell + width)
+        return f"S${int(sell)}C / B${int(buy)}C"
 
 
 def next_expiry():
