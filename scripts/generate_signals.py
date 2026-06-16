@@ -30,26 +30,72 @@ def fetch_data(ticker, period="3mo"):
 
 
 def compute_bias(df):
-    close = df["Close"].squeeze()
+    close  = df["Close"].squeeze()
+    volume = df["Volume"].squeeze()
+    high   = df["High"].squeeze()
+    low    = df["Low"].squeeze()
+
     ema20 = close.ewm(span=20).mean()
     ema50 = close.ewm(span=50).mean()
-    last = float(close.iloc[-1])
-    e20  = float(ema20.iloc[-1])
-    e50  = float(ema50.iloc[-1])
+    last  = float(close.iloc[-1])
+    e20   = float(ema20.iloc[-1])
+    e50   = float(ema50.iloc[-1])
 
-    # momentum: last 5 bars
+    # 5-bar momentum
     mom5 = float(close.iloc[-1]) - float(close.iloc[-6])
 
-    bull_points = 0
-    bull_points += 2 if last > e20 else -2
-    bull_points += 1 if last > e50 else -1
-    bull_points += 1 if e20 > e50 else -1
-    bull_points += 1 if mom5 > 0 else -1
+    # Volume: today vs 20-day avg
+    vol_today  = float(volume.iloc[-1])
+    vol_avg20  = float(volume.rolling(20).mean().iloc[-1])
+    vol_ratio  = vol_today / vol_avg20 if vol_avg20 > 0 else 1.0
 
-    bias = "BULL" if bull_points > 0 else "BEAR"
-    conf = min(99, int(50 + abs(bull_points) / 5 * 49))
+    # ATR (14-day true range as % of price)
+    prev_close = close.shift(1)
+    tr = np.maximum(
+        (high - low).values,
+        np.maximum(
+            abs(high.values - prev_close.values),
+            abs(low.values  - prev_close.values)
+        )
+    )
+    atr14    = float(np.nanmean(tr[-14:]))
+    atr_pct  = (atr14 / last) * 100
+
+    # --- Scoring (max 7 pts, min -7 pts) ---
+    points = 0
+    points += 2 if last > e20 else -2          # trend (weighted)
+    points += 1 if last > e50 else -1          # medium-term trend
+    points += 1 if e20 > e50 else -1           # MA alignment
+    points += 1 if mom5 > 0 else -1            # 5-bar momentum
+    points += 1 if vol_ratio >= 1.0 else -1    # volume conviction
+    # ATR: calm market = confident signal, volatile = noisy
+    if atr_pct < 1.5:
+        points += 1
+    elif atr_pct > 3.0:
+        points -= 1
+    # else neutral (0) between 1.5–3%
+
+    bias = "BULL" if points > 0 else "BEAR"
+    # Cap at 82% — no signal is ever >82% reliable
+    conf = min(82, max(35, int(50 + abs(points) / 7 * 40)))
+
     chg_pct = (float(close.iloc[-1]) / float(close.iloc[-2]) - 1) * 100
-    return bias, conf, last, chg_pct, e20, e50
+
+    meta = {
+        "vol_ratio": round(vol_ratio, 2),
+        "atr_pct":   round(atr_pct, 2),
+        "points":    points,
+        "breakdown": {
+            "price_vs_ema20": last > e20,
+            "price_vs_ema50": last > e50,
+            "ema20_vs_ema50": e20 > e50,
+            "momentum_5bar":  mom5 > 0,
+            "volume_above_avg": vol_ratio >= 1.0,
+            "atr_calm":       atr_pct < 1.5,
+        }
+    }
+
+    return bias, conf, last, chg_pct, meta
 
 
 def compute_ivr(vix_df):
@@ -144,7 +190,8 @@ def generate_pine(signals, run_date):
         lines.append(f'    table.cell(t, 1, {r}, "{price_str}", text_color=color.white)')
         lines.append(f'    table.cell(t, 2, {r}, "{chg_str}", text_color={chg_color})')
         lines.append(f'    table.cell(t, 3, {r}, "{s["bias"]}", text_color=color.white, bgcolor={bias_bg})')
-        lines.append(f'    table.cell(t, 4, {r}, "{s["conf"]}%", text_color=color.white)')
+        conf_color = "color.green" if s["conf"] >= 65 else "color.orange" if s["conf"] >= 55 else "color.red"
+        lines.append(f'    table.cell(t, 4, {r}, "{s["conf"]}% ({s["points"]}/7)", text_color={conf_color})')
         lines.append(f'    table.cell(t, 5, {r}, "{s["iv"]}%  IVR {s["ivr"]}", text_color={ivr_color})')
         lines.append(f'    table.cell(t, 6, {r}, "{s["strategy"]}", text_color=color.lime)')
         lines.append(f'    table.cell(t, 7, {r}, "{s["strikes"]}", text_color=color.white)')
@@ -168,7 +215,7 @@ def main():
     for ticker, meta in TICKERS.items():
         try:
             df = fetch_data(ticker)
-            bias, conf, price, chg, e20, e50 = compute_bias(df)
+            bias, conf, price, chg, signal_meta = compute_bias(df)
             strategy = select_strategy(bias, ivr_global, iv_pct)
             strikes = select_strikes(price, strategy, iv_pct)
 
@@ -183,8 +230,14 @@ def main():
                 "strategy": strategy,
                 "strikes":  strikes,
                 "expiry":   expiry,
+                "vol_ratio":  signal_meta["vol_ratio"],
+                "atr_pct":    signal_meta["atr_pct"],
+                "points":     signal_meta["points"],
+                "breakdown":  signal_meta["breakdown"],
             })
-            print(f"  {meta['label']:12s} {bias:4s} {conf}%  {strategy:20s} {strikes}")
+            bd = signal_meta["breakdown"]
+            checks = sum(1 for v in bd.values() if v)
+            print(f"  {meta['label']:12s} {bias:4s} {conf}%  pts={signal_meta['points']}/7  vol={signal_meta['vol_ratio']:.1f}x  atr={signal_meta['atr_pct']:.1f}%  {strategy}")
         except Exception as e:
             print(f"  ERROR {ticker}: {e}")
 

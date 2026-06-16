@@ -6,48 +6,92 @@
       "price": 754.8300170898438,
       "chg": 1.7633996750716197,
       "bias": "BULL",
-      "conf": 99,
+      "conf": 78,
       "iv": 16.2,
       "ivr": 5,
       "strategy": "Bull Call Spread",
       "strikes": "$756C / $801C",
-      "expiry": "Jul 3"
+      "expiry": "Jul 3",
+      "vol_ratio": 0.84,
+      "atr_pct": 1.34,
+      "points": 5,
+      "breakdown": {
+        "price_vs_ema20": true,
+        "price_vs_ema50": true,
+        "ema20_vs_ema50": true,
+        "momentum_5bar": true,
+        "volume_above_avg": false,
+        "atr_calm": true
+      }
     },
     {
       "label": "QQQ",
       "price": 744.0,
       "chg": 3.141371932916659,
       "bias": "BULL",
-      "conf": 99,
+      "conf": 72,
       "iv": 16.2,
       "ivr": 5,
       "strategy": "Bull Call Spread",
       "strikes": "$745C / $789C",
-      "expiry": "Jul 3"
+      "expiry": "Jul 3",
+      "vol_ratio": 0.96,
+      "atr_pct": 2.24,
+      "points": 4,
+      "breakdown": {
+        "price_vs_ema20": true,
+        "price_vs_ema50": true,
+        "ema20_vs_ema50": true,
+        "momentum_5bar": true,
+        "volume_above_avg": false,
+        "atr_calm": false
+      }
     },
     {
       "label": "DJX (DIA)",
       "price": 518.4400024414062,
       "chg": 1.0486112556842064,
       "bias": "BULL",
-      "conf": 99,
+      "conf": 78,
       "iv": 16.2,
       "ivr": 5,
       "strategy": "Bull Call Spread",
       "strikes": "$519C / $550C",
-      "expiry": "Jul 3"
+      "expiry": "Jul 3",
+      "vol_ratio": 0.98,
+      "atr_pct": 1.31,
+      "points": 5,
+      "breakdown": {
+        "price_vs_ema20": true,
+        "price_vs_ema50": true,
+        "ema20_vs_ema50": true,
+        "momentum_5bar": true,
+        "volume_above_avg": false,
+        "atr_calm": true
+      }
     },
     {
       "label": "MRUT (IWM)",
       "price": 294.6400146484375,
-      "chg": 0.5768910636576141,
+      "chg": 0.8160714874947406,
       "bias": "BULL",
-      "conf": 99,
+      "conf": 72,
       "iv": 16.2,
       "ivr": 5,
       "strategy": "Bull Call Spread",
       "strikes": "$295C / $312C",
-      "expiry": "Jul 3"
+      "expiry": "Jul 3",
+      "vol_ratio": 0.81,
+      "atr_pct": 2.11,
+      "points": 4,
+      "breakdown": {
+        "price_vs_ema20": true,
+        "price_vs_ema50": true,
+        "ema20_vs_ema50": true,
+        "momentum_5bar": true,
+        "volume_above_avg": false,
+        "atr_calm": false
+      }
     }
   ]
 }
