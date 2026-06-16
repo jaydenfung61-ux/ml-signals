@@ -25,8 +25,8 @@ VIX_TICKER     = "^VIX"
 EXPIRY_DAYS_TARGET = 15
 
 
-def fetch_data(ticker, period="6mo"):
-    """6mo = ~125 trading days — enough for EMA50 to converge properly."""
+def fetch_data(ticker, period="1y"):
+    """1y = ~252 trading days — needed for EMA50 convergence AND 52-week IVR range."""
     df = yf.download(ticker, period=period, progress=False, auto_adjust=True)
     if df.empty:
         raise ValueError(f"No data for {ticker}")
@@ -105,18 +105,31 @@ def compute_bias(df):
     return bias, conf, last, chg_pct, meta
 
 
-def compute_ivr(vix_df):
+def compute_hv_ivr(df):
     """
-    IVR (IV Rank) = where current VIX sits within its 52-week high/low range.
-    Must use 1-year data — 3-month data gives a compressed, inaccurate rank.
-    VIX is used as IV proxy for all ETFs (SPX-derived; QQQ/IWM have higher actual IV).
+    Per-ETF historical volatility (HV20) and its 52-week IV Rank.
+
+    HV20 = annualized 20-day realized volatility of log returns.
+    Each ETF gets its own IV and IVR — QQQ/IWM naturally show higher
+    volatility than SPY/DIA, so strategies can differ across instruments.
+    Requires 1-year of data for a meaningful 52-week range.
     """
+    close = df["Close"].squeeze()
+    log_ret = np.log(close / close.shift(1))
+    hv20_series = log_ret.rolling(20).std() * np.sqrt(252) * 100
+
+    current_hv = float(hv20_series.iloc[-1])
+    high_52    = float(hv20_series.max())
+    low_52     = float(hv20_series.min())
+    ivr = int((current_hv - low_52) / (high_52 - low_52) * 100) if high_52 != low_52 else 50
+
+    return round(current_hv, 1), max(0, min(100, ivr))
+
+
+def compute_vix(vix_df):
+    """Return latest VIX close — shown in output for reference only."""
     vix = vix_df["Close"].squeeze()
-    current_vix = float(vix.iloc[-1])
-    high_52 = float(vix.max())
-    low_52  = float(vix.min())
-    ivr = int((current_vix - low_52) / (high_52 - low_52) * 100) if high_52 != low_52 else 50
-    return round(current_vix, 1), ivr
+    return round(float(vix.iloc[-1]), 1)
 
 
 def select_strategy(bias, ivr, iv_pct):
@@ -195,7 +208,7 @@ def generate_pine(signals, run_date, run_tag):
         "",
     ]
 
-    headers = ["Instrument", "Price", "Chg%", "Bias", "Conf (pts)", "VIX / IVR", "Strategy", "Strikes (B/S)", "Expiry"]
+    headers = ["Instrument", "Price", "Chg%", "Bias", "Conf (pts)", "HV / IVR", "Strategy", "Strikes (B/S)", "Expiry"]
     for col, h in enumerate(headers):
         lines.append(f'    table.cell(t, {col}, 0, "{h}", text_color=color.yellow, bgcolor=color.new(color.black,20), text_size=size.small)')
     lines.append("")
@@ -235,17 +248,17 @@ def main():
 
     print(f"ML Signals — {run_date} ({run_tag}) | Expiry: {expiry}")
 
-    # IVR requires 1-year VIX data for a proper 52-week range
-    vix_df = fetch_data(VIX_TICKER, period="1y")
-    iv_pct, ivr_global = compute_ivr(vix_df)
-    print(f"VIX: {iv_pct}%  IVR: {ivr_global}")
+    vix_df  = fetch_data(VIX_TICKER, period="1y")
+    vix_now = compute_vix(vix_df)
+    print(f"VIX: {vix_now}% (reference only — each ETF uses its own HV/IVR)")
 
     signals = []
     for ticker, meta in TICKERS.items():
         try:
-            df = fetch_data(ticker, period="6mo")
+            df = fetch_data(ticker, period="1y")
             bias, conf, price, chg, signal_meta = compute_bias(df)
-            strategy = select_strategy(bias, ivr_global, iv_pct)
+            iv_pct, ivr = compute_hv_ivr(df)          # per-ETF HV and IVR
+            strategy = select_strategy(bias, ivr, iv_pct)
             strikes  = select_strikes(price, strategy, iv_pct)
 
             signals.append({
@@ -255,7 +268,7 @@ def main():
                 "bias":      bias,
                 "conf":      conf,
                 "iv":        iv_pct,
-                "ivr":       ivr_global,
+                "ivr":       ivr,
                 "strategy":  strategy,
                 "strikes":   strikes,
                 "expiry":    expiry,
@@ -265,7 +278,7 @@ def main():
                 "breakdown": signal_meta["breakdown"],
             })
             print(f"  {meta['label']:12s} {bias:4s} {conf}%  pts={signal_meta['points']}/7  "
-                  f"vol={signal_meta['vol_ratio']:.1f}x  atr={signal_meta['atr_pct']:.1f}%  {strikes}")
+                  f"HV={iv_pct}% IVR={ivr}  vol={signal_meta['vol_ratio']:.1f}x  atr={signal_meta['atr_pct']:.1f}%  {strikes}")
         except Exception as e:
             print(f"  ERROR {ticker}: {e}")
 
