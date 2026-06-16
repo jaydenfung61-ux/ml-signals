@@ -3,6 +3,7 @@ name: Generate ML Signals
 on:
   schedule:
     - cron: '30 13 * * 1-5'   # 9:30 AM EDT (13:30 UTC) weekdays
+    - cron: '30 18 * * 1-5'   # 2:30 PM EDT (18:30 UTC) weekdays
   workflow_dispatch:            # manual trigger from GitHub UI
 
 permissions:
