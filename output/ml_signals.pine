@@ -30,7 +30,7 @@ if barstate.islast
     table.cell(t, 1, 2, "$740.62", text_color=color.white)
     table.cell(t, 2, 2, "+2.51%", text_color=color.green)
     table.cell(t, 3, 2, "BULL", text_color=color.white, bgcolor=color.new(color.green,20))
-    table.cell(t, 4, 2, "72% (4/7)", text_color=color.green)
+    table.cell(t, 4, 2, "82% (6/7)", text_color=color.green)
     table.cell(t, 5, 2, "30.1%  IVR 100", text_color=color.red)
     table.cell(t, 6, 2, "Bull Put Spread", text_color=color.lime)
     table.cell(t, 7, 2, "S$714P / B$694P", text_color=color.white)

@@ -30,21 +30,21 @@
       "price": 740.6199951171875,
       "chg": 2.5065376405563056,
       "bias": "BULL",
-      "conf": 72,
+      "conf": 82,
       "iv": 30.1,
       "ivr": 100,
       "strategy": "Bull Put Spread",
       "strikes": "S$714P / B$694P",
       "expiry": "Jul 3",
-      "vol_ratio": 0.94,
+      "vol_ratio": 1.01,
       "atr_pct": 2.48,
-      "points": 4,
+      "points": 6,
       "breakdown": {
         "price_vs_ema20": true,
         "price_vs_ema50": true,
         "ema20_vs_ema50": true,
         "momentum_5bar": true,
-        "volume_above_avg": false,
+        "volume_above_avg": true,
         "atr_calm": false
       }
     },
@@ -59,7 +59,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$507P / B$502P",
       "expiry": "Jul 3",
-      "vol_ratio": 1.18,
+      "vol_ratio": 1.21,
       "atr_pct": 1.39,
       "points": 7,
       "breakdown": {
@@ -82,7 +82,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$288P / B$283P",
       "expiry": "Jul 3",
-      "vol_ratio": 1.02,
+      "vol_ratio": 1.09,
       "atr_pct": 2.28,
       "points": 6,
       "breakdown": {
