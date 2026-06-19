@@ -1,6 +1,6 @@
 {
   "date": "2026-06-19",
-  "run": "Open",
+  "run": "Midday",
   "signals": [
     {
       "label": "SPY",
@@ -36,7 +36,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$714P / B$694P",
       "expiry": "Jul 10",
-      "vol_ratio": 1.02,
+      "vol_ratio": 1.03,
       "atr_pct": 2.48,
       "points": 6,
       "breakdown": {

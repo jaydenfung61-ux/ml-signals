@@ -1,5 +1,5 @@
 //@version=6
-indicator("ML Signals — 2026-06-19 (Open)", overlay=true)
+indicator("ML Signals — 2026-06-19 (Midday)", overlay=true)
 
 if barstate.islast
     t = table.new(position.top_right, 9, 5,
