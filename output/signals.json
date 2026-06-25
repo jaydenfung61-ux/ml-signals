@@ -4,14 +4,14 @@
   "signals": [
     {
       "label": "SPY",
-      "price": 733.5,
-      "chg": 0.0354603907435358,
+      "price": 734.2999877929688,
+      "chg": 0.14456352254532678,
       "bias": "BEAR",
       "conf": 61,
       "iv": 17.0,
-      "ivr": 76,
+      "ivr": 77,
       "strategy": "Bear Call Spread",
-      "strikes": "S$748C / B$758C",
+      "strikes": "S$749C / B$759C",
       "expiry": "Jul 10",
       "vol_ratio": 0.77,
       "atr_pct": 1.67,
@@ -59,7 +59,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$510P / B$505P",
       "expiry": "Jul 10",
-      "vol_ratio": 0.89,
+      "vol_ratio": 0.9,
       "atr_pct": 1.38,
       "points": 5,
       "breakdown": {
