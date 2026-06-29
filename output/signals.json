@@ -13,7 +13,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$725P / B$710P",
       "expiry": "Jul 17",
-      "vol_ratio": 0.84,
+      "vol_ratio": 0.9,
       "atr_pct": 1.69,
       "points": 2,
       "breakdown": {
@@ -82,7 +82,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$291P / B$286P",
       "expiry": "Jul 17",
-      "vol_ratio": 0.78,
+      "vol_ratio": 0.81,
       "atr_pct": 2.09,
       "points": 4,
       "breakdown": {
