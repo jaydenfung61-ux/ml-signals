@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-02",
-  "run": "Midday",
+  "date": "2026-07-03",
+  "run": "Open",
   "signals": [
     {
       "label": "SPY",
@@ -12,8 +12,8 @@
       "ivr": 84,
       "strategy": "Bull Put Spread",
       "strikes": "S$728P / B$713P",
-      "expiry": "Jul 17",
-      "vol_ratio": 0.73,
+      "expiry": "Jul 24",
+      "vol_ratio": 0.89,
       "atr_pct": 1.42,
       "points": 5,
       "breakdown": {
@@ -35,8 +35,8 @@
       "ivr": 100,
       "strategy": "Bear Call Spread",
       "strikes": "S$743C / B$768C",
-      "expiry": "Jul 17",
-      "vol_ratio": 0.92,
+      "expiry": "Jul 24",
+      "vol_ratio": 0.94,
       "atr_pct": 2.41,
       "points": -2,
       "breakdown": {
@@ -58,8 +58,8 @@
       "ivr": 63,
       "strategy": "Bull Put Spread",
       "strikes": "S$519P / B$514P",
-      "expiry": "Jul 17",
-      "vol_ratio": 0.58,
+      "expiry": "Jul 24",
+      "vol_ratio": 0.64,
       "atr_pct": 1.12,
       "points": 5,
       "breakdown": {
@@ -81,8 +81,8 @@
       "ivr": 68,
       "strategy": "Bull Put Spread",
       "strikes": "S$290P / B$285P",
-      "expiry": "Jul 17",
-      "vol_ratio": 0.69,
+      "expiry": "Jul 24",
+      "vol_ratio": 0.71,
       "atr_pct": 1.75,
       "points": 2,
       "breakdown": {
