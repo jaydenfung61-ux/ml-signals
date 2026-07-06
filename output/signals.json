@@ -50,8 +50,8 @@
     },
     {
       "label": "DJX (DIA)",
-      "price": 530.02001953125,
-      "chg": 0.40539793677401015,
+      "price": 530.0900268554688,
+      "chg": 0.41865991365723776,
       "bias": "BULL",
       "conf": 78,
       "iv": 13.2,
@@ -82,7 +82,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$291P / B$286P",
       "expiry": "Jul 24",
-      "vol_ratio": 0.6,
+      "vol_ratio": 0.62,
       "atr_pct": 1.68,
       "points": 2,
       "breakdown": {
