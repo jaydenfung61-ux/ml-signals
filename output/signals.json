@@ -4,8 +4,8 @@
   "signals": [
     {
       "label": "SPY",
-      "price": 747.6199951171875,
-      "chg": -0.48717309617732907,
+      "price": 747.7100219726562,
+      "chg": -0.4751899671231685,
       "bias": "BULL",
       "conf": 78,
       "iv": 15.8,
@@ -13,7 +13,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$734P / B$724P",
       "expiry": "Jul 24",
-      "vol_ratio": 0.65,
+      "vol_ratio": 0.69,
       "atr_pct": 1.31,
       "points": 5,
       "breakdown": {
@@ -36,7 +36,7 @@
       "strategy": "Bear Call Spread",
       "strikes": "S$736C / B$756C",
       "expiry": "Jul 24",
-      "vol_ratio": 0.79,
+      "vol_ratio": 0.82,
       "atr_pct": 2.37,
       "points": -2,
       "breakdown": {
@@ -59,7 +59,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$528C / S$538C",
       "expiry": "Jul 24",
-      "vol_ratio": 0.8,
+      "vol_ratio": 0.86,
       "atr_pct": 1.06,
       "points": 5,
       "breakdown": {
@@ -73,8 +73,8 @@
     },
     {
       "label": "MRUT (IWM)",
-      "price": 296.20001220703125,
-      "chg": -0.9033060369978418,
+      "price": 296.19000244140625,
+      "chg": -0.90665490478955,
       "bias": "BULL",
       "conf": 61,
       "iv": 16.3,
@@ -82,7 +82,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$296C / S$304C",
       "expiry": "Jul 24",
-      "vol_ratio": 0.61,
+      "vol_ratio": 0.62,
       "atr_pct": 1.67,
       "points": 2,
       "breakdown": {
