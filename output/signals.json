@@ -4,8 +4,8 @@
   "signals": [
     {
       "label": "SPY",
-      "price": 751.5999755859375,
-      "chg": 0.8317616003230777,
+      "price": 751.7100219726562,
+      "chg": 0.846525000257925,
       "bias": "BULL",
       "conf": 78,
       "iv": 16.0,
@@ -13,7 +13,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$737P / B$727P",
       "expiry": "Jul 24",
-      "vol_ratio": 0.58,
+      "vol_ratio": 0.66,
       "atr_pct": 1.27,
       "points": 5,
       "breakdown": {
@@ -27,16 +27,16 @@
     },
     {
       "label": "QQQ",
-      "price": 723.225830078125,
-      "chg": 1.6566158209088577,
+      "price": 723.280029296875,
+      "chg": 1.664234062582648,
       "bias": "BULL",
       "conf": 61,
-      "iv": 30.9,
+      "iv": 31.0,
       "ivr": 84,
       "strategy": "Bull Put Spread",
       "strikes": "S$696P / B$676P",
       "expiry": "Jul 24",
-      "vol_ratio": 0.66,
+      "vol_ratio": 0.7,
       "atr_pct": 2.28,
       "points": 2,
       "breakdown": {
@@ -50,8 +50,8 @@
     },
     {
       "label": "DJX (DIA)",
-      "price": 524.2000122070312,
-      "chg": 0.2735414469757558,
+      "price": 524.1900024414062,
+      "chg": 0.2716266918729282,
       "bias": "BULL",
       "conf": 78,
       "iv": 12.9,
@@ -59,7 +59,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$516P / B$511P",
       "expiry": "Jul 24",
-      "vol_ratio": 0.55,
+      "vol_ratio": 0.58,
       "atr_pct": 1.04,
       "points": 5,
       "breakdown": {
@@ -73,8 +73,8 @@
     },
     {
       "label": "MRUT (IWM)",
-      "price": 297.2699890136719,
-      "chg": 1.2913922193904748,
+      "price": 297.239990234375,
+      "chg": 1.2811704740674834,
       "bias": "BULL",
       "conf": 61,
       "iv": 17.1,
@@ -82,7 +82,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$297C / S$306C",
       "expiry": "Jul 24",
-      "vol_ratio": 0.57,
+      "vol_ratio": 0.59,
       "atr_pct": 1.61,
       "points": 2,
       "breakdown": {
