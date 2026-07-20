@@ -4,17 +4,17 @@
   "signals": [
     {
       "label": "SPY",
-      "price": 742.2100219726562,
-      "chg": -0.14529404224629117,
+      "price": 742.0900268554688,
+      "chg": -0.16143782471810253,
       "bias": "BEAR",
       "conf": 55,
-      "iv": 11.6,
+      "iv": 11.7,
       "ivr": 40,
       "strategy": "Bear Put Spread",
       "strikes": "B$742P / S$726P",
       "expiry": "Aug 7",
-      "vol_ratio": 0.81,
-      "atr_pct": 0.98,
+      "vol_ratio": 0.98,
+      "atr_pct": 0.99,
       "points": -1,
       "breakdown": {
         "price_vs_ema20": false,
@@ -36,7 +36,7 @@
       "strategy": "Bear Call Spread",
       "strikes": "S$717C / B$732C",
       "expiry": "Aug 7",
-      "vol_ratio": 0.68,
+      "vol_ratio": 0.71,
       "atr_pct": 2.04,
       "points": -4,
       "breakdown": {
@@ -50,8 +50,8 @@
     },
     {
       "label": "DJX (DIA)",
-      "price": 517.8900146484375,
-      "chg": -0.5606618390284868,
+      "price": 517.9400024414062,
+      "chg": -0.5510637527392337,
       "bias": "BEAR",
       "conf": 55,
       "iv": 7.8,
@@ -59,7 +59,7 @@
       "strategy": "Bear Put Spread",
       "strikes": "B$518P / S$510P",
       "expiry": "Aug 7",
-      "vol_ratio": 0.56,
+      "vol_ratio": 0.57,
       "atr_pct": 1.01,
       "points": -1,
       "breakdown": {
@@ -73,8 +73,8 @@
     },
     {
       "label": "MRUT (IWM)",
-      "price": 292.3500061035156,
-      "chg": -0.5747525480526816,
+      "price": 292.30999755859375,
+      "chg": -0.5883590450460163,
       "bias": "BEAR",
       "conf": 55,
       "iv": 10.7,
@@ -82,7 +82,7 @@
       "strategy": "Bear Put Spread",
       "strikes": "B$292P / S$286P",
       "expiry": "Aug 7",
-      "vol_ratio": 0.84,
+      "vol_ratio": 0.89,
       "atr_pct": 1.4,
       "points": -1,
       "breakdown": {
