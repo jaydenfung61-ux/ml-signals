@@ -4,17 +4,17 @@
   "signals": [
     {
       "label": "SPY",
-      "price": 738.760009765625,
-      "chg": 0.0785739380095185,
+      "price": 739.0900268554688,
+      "chg": 0.02165755636849287,
       "bias": "BEAR",
       "conf": 55,
-      "iv": 11.6,
-      "ivr": 40,
+      "iv": 11.3,
+      "ivr": 37,
       "strategy": "Bear Put Spread",
       "strikes": "B$739P / S$724P",
       "expiry": "Aug 14",
-      "vol_ratio": 0.78,
-      "atr_pct": 0.98,
+      "vol_ratio": 0.88,
+      "atr_pct": 0.99,
       "points": -1,
       "breakdown": {
         "price_vs_ema20": false,
@@ -27,8 +27,8 @@
     },
     {
       "label": "QQQ",
-      "price": 681.7949829101562,
-      "chg": -0.3558741399968479,
+      "price": 682.1199951171875,
+      "chg": -0.3083737064717651,
       "bias": "BEAR",
       "conf": 61,
       "iv": 23.3,
@@ -36,7 +36,7 @@
       "strategy": "Bear Call Spread",
       "strikes": "S$701C / B$716C",
       "expiry": "Aug 14",
-      "vol_ratio": 1.06,
+      "vol_ratio": 1.12,
       "atr_pct": 1.91,
       "points": -2,
       "breakdown": {
@@ -50,8 +50,8 @@
     },
     {
       "label": "DJX (DIA)",
-      "price": 521.239990234375,
-      "chg": 0.4780592994958255,
+      "price": 521.260009765625,
+      "chg": 0.4819184117776265,
       "bias": "BULL",
       "conf": 78,
       "iv": 9.1,
@@ -59,7 +59,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$521C / S$530C",
       "expiry": "Aug 14",
-      "vol_ratio": 0.85,
+      "vol_ratio": 0.87,
       "atr_pct": 1.0,
       "points": 5,
       "breakdown": {
@@ -73,8 +73,8 @@
     },
     {
       "label": "MRUT (IWM)",
-      "price": 292.8800048828125,
-      "chg": 0.5872828162995392,
+      "price": 292.9100036621094,
+      "chg": 0.5975856558480652,
       "bias": "BULL",
       "conf": 55,
       "iv": 11.3,
@@ -82,7 +82,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$293C / S$300C",
       "expiry": "Aug 14",
-      "vol_ratio": 0.87,
+      "vol_ratio": 0.91,
       "atr_pct": 1.32,
       "points": 1,
       "breakdown": {
