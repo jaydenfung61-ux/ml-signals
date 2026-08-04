@@ -4,8 +4,8 @@
   "signals": [
     {
       "label": "SPY",
-      "price": 771.22998046875,
-      "chg": 1.7896970797907086,
+      "price": 771.3300170898438,
+      "chg": 1.8029002715958642,
       "bias": "BULL",
       "conf": 82,
       "iv": 14.5,
@@ -36,7 +36,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$701P / B$681P",
       "expiry": "Aug 21",
-      "vol_ratio": 1.31,
+      "vol_ratio": 1.41,
       "atr_pct": 2.2,
       "points": 4,
       "breakdown": {
@@ -50,12 +50,12 @@
     },
     {
       "label": "DJX (DIA)",
-      "price": 540.469970703125,
-      "chg": 1.7412748974321657,
+      "price": 540.4299926757812,
+      "chg": 1.733749196301071,
       "bias": "BULL",
       "conf": 82,
-      "iv": 14.8,
-      "ivr": 67,
+      "iv": 14.7,
+      "ivr": 66,
       "strategy": "Bull Put Spread",
       "strikes": "S$530P / B$520P",
       "expiry": "Aug 21",
@@ -73,8 +73,8 @@
     },
     {
       "label": "MRUT (IWM)",
-      "price": 301.69000244140625,
-      "chg": 1.84660090411235,
+      "price": 301.7099914550781,
+      "chg": 1.8533489338164566,
       "bias": "BULL",
       "conf": 78,
       "iv": 15.9,
@@ -82,7 +82,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$302C / S$310C",
       "expiry": "Aug 21",
-      "vol_ratio": 0.91,
+      "vol_ratio": 0.93,
       "atr_pct": 1.46,
       "points": 5,
       "breakdown": {
