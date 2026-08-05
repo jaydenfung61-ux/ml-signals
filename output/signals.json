@@ -4,8 +4,8 @@
   "signals": [
     {
       "label": "SPY",
-      "price": 769.77001953125,
-      "chg": -0.202247744030426,
+      "price": 769.7899780273438,
+      "chg": -0.19966020100066206,
       "bias": "BULL",
       "conf": 78,
       "iv": 14.5,
@@ -13,8 +13,8 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$756P / B$746P",
       "expiry": "Aug 21",
-      "vol_ratio": 0.81,
-      "atr_pct": 1.26,
+      "vol_ratio": 0.89,
+      "atr_pct": 1.25,
       "points": 5,
       "breakdown": {
         "price_vs_ema20": true,
@@ -36,7 +36,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$694P / B$674P",
       "expiry": "Aug 21",
-      "vol_ratio": 0.74,
+      "vol_ratio": 0.78,
       "atr_pct": 2.18,
       "points": 2,
       "breakdown": {
@@ -50,8 +50,8 @@
     },
     {
       "label": "DJX (DIA)",
-      "price": 542.7849731445312,
-      "chg": 0.4357605056466207,
+      "price": 542.8099975585938,
+      "chg": 0.44039096924073373,
       "bias": "BULL",
       "conf": 82,
       "iv": 14.1,
@@ -59,7 +59,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$534P / B$529P",
       "expiry": "Aug 21",
-      "vol_ratio": 1.26,
+      "vol_ratio": 1.28,
       "atr_pct": 1.26,
       "points": 7,
       "breakdown": {
@@ -82,7 +82,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$300C / S$308C",
       "expiry": "Aug 21",
-      "vol_ratio": 0.78,
+      "vol_ratio": 0.82,
       "atr_pct": 1.47,
       "points": 5,
       "breakdown": {
