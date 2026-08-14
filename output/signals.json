@@ -4,8 +4,8 @@
   "signals": [
     {
       "label": "SPY",
-      "price": 776.0700073242188,
-      "chg": -0.23268338911300868,
+      "price": 776.3400268554688,
+      "chg": -0.19797115463531245,
       "bias": "BULL",
       "conf": 78,
       "iv": 13.3,
@@ -13,7 +13,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$763P / B$753P",
       "expiry": "Sep 4",
-      "vol_ratio": 0.44,
+      "vol_ratio": 0.54,
       "atr_pct": 1.03,
       "points": 5,
       "breakdown": {
@@ -27,17 +27,17 @@
     },
     {
       "label": "QQQ",
-      "price": 729.5900268554688,
-      "chg": -0.33876274726983846,
+      "price": 731.0700073242188,
+      "chg": -0.13659895774928987,
       "bias": "BULL",
       "conf": 72,
-      "iv": 23.7,
+      "iv": 23.6,
       "ivr": 59,
       "strategy": "Bull Put Spread",
-      "strikes": "S$709P / B$694P",
+      "strikes": "S$710P / B$695P",
       "expiry": "Sep 4",
-      "vol_ratio": 0.46,
-      "atr_pct": 1.79,
+      "vol_ratio": 0.56,
+      "atr_pct": 1.78,
       "points": 4,
       "breakdown": {
         "price_vs_ema20": true,
@@ -50,8 +50,8 @@
     },
     {
       "label": "DJX (DIA)",
-      "price": 537.1500244140625,
-      "chg": -0.14127805179484643,
+      "price": 536.7999877929688,
+      "chg": -0.20635150991413775,
       "bias": "BULL",
       "conf": 67,
       "iv": 14.2,
@@ -59,7 +59,7 @@
       "strategy": "Bull Put Spread",
       "strikes": "S$528P / B$523P",
       "expiry": "Sep 4",
-      "vol_ratio": 0.46,
+      "vol_ratio": 0.52,
       "atr_pct": 1.09,
       "points": 3,
       "breakdown": {
@@ -73,8 +73,8 @@
     },
     {
       "label": "MRUT (IWM)",
-      "price": 304.6600036621094,
-      "chg": 0.38220878487953414,
+      "price": 305.0899963378906,
+      "chg": 0.5238867670150249,
       "bias": "BULL",
       "conf": 78,
       "iv": 15.2,
@@ -82,7 +82,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$305C / S$314C",
       "expiry": "Sep 4",
-      "vol_ratio": 0.51,
+      "vol_ratio": 0.62,
       "atr_pct": 1.24,
       "points": 5,
       "breakdown": {
