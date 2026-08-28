@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-27",
-  "run": "Close",
+  "date": "2026-08-28",
+  "run": "Open",
   "signals": [
     {
       "label": "SPY",
@@ -13,7 +13,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$771C / S$786C",
       "expiry": "Sep 18",
-      "vol_ratio": 0.83,
+      "vol_ratio": 0.84,
       "atr_pct": 0.63,
       "points": 5,
       "breakdown": {
@@ -59,7 +59,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$535C / S$544C",
       "expiry": "Sep 18",
-      "vol_ratio": 0.72,
+      "vol_ratio": 0.75,
       "atr_pct": 0.67,
       "points": 5,
       "breakdown": {
@@ -82,7 +82,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$300C / S$308C",
       "expiry": "Sep 18",
-      "vol_ratio": 0.79,
+      "vol_ratio": 0.8,
       "atr_pct": 0.87,
       "points": 5,
       "breakdown": {
