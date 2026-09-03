@@ -13,7 +13,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$773C / S$784C",
       "expiry": "Sep 18",
-      "vol_ratio": 1.13,
+      "vol_ratio": 1.16,
       "atr_pct": 0.71,
       "points": 7,
       "breakdown": {
@@ -36,7 +36,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$718C / S$735C",
       "expiry": "Sep 18",
-      "vol_ratio": 0.95,
+      "vol_ratio": 0.96,
       "atr_pct": 1.15,
       "points": 3,
       "breakdown": {
@@ -59,7 +59,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$537C / S$546C",
       "expiry": "Sep 18",
-      "vol_ratio": 1.59,
+      "vol_ratio": 1.66,
       "atr_pct": 0.78,
       "points": 7,
       "breakdown": {
