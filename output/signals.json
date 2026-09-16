@@ -13,7 +13,7 @@
       "strategy": "Bear Put Spread",
       "strikes": "B$754P / S$744P",
       "expiry": "Oct 2",
-      "vol_ratio": 1.49,
+      "vol_ratio": 1.5,
       "atr_pct": 0.86,
       "points": -1,
       "breakdown": {
@@ -36,7 +36,7 @@
       "strategy": "Bear Put Spread",
       "strikes": "B$705P / S$690P",
       "expiry": "Oct 2",
-      "vol_ratio": 1.15,
+      "vol_ratio": 1.16,
       "atr_pct": 1.17,
       "points": -1,
       "breakdown": {
@@ -59,7 +59,7 @@
       "strategy": "Bear Put Spread",
       "strikes": "B$515P / S$506P",
       "expiry": "Oct 2",
-      "vol_ratio": 1.68,
+      "vol_ratio": 1.73,
       "atr_pct": 1.01,
       "points": -1,
       "breakdown": {
