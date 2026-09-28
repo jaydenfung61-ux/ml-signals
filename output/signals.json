@@ -1,11 +1,11 @@
 {
   "date": "2026-09-28",
-  "run": "Midday",
+  "run": "Close",
   "signals": [
     {
       "label": "SPY",
-      "price": 765.5499877929688,
-      "chg": -0.7519268784008104,
+      "price": 765.6099853515625,
+      "chg": -0.7441486246259066,
       "bias": "BULL",
       "conf": 67,
       "iv": 11.1,
@@ -13,7 +13,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$766C / S$781C",
       "expiry": "Oct 16",
-      "vol_ratio": 0.84,
+      "vol_ratio": 0.96,
       "atr_pct": 0.91,
       "points": 3,
       "breakdown": {
@@ -36,7 +36,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$737C / S$757C",
       "expiry": "Oct 16",
-      "vol_ratio": 1.17,
+      "vol_ratio": 1.24,
       "atr_pct": 1.36,
       "points": 5,
       "breakdown": {
@@ -50,8 +50,8 @@
     },
     {
       "label": "DJX (DIA)",
-      "price": 514.0900268554688,
-      "chg": -0.6570104626306694,
+      "price": 514.02001953125,
+      "chg": -0.670538709657631,
       "bias": "BEAR",
       "conf": 78,
       "iv": 11.7,
@@ -59,7 +59,7 @@
       "strategy": "Bear Put Spread",
       "strikes": "B$514P / S$504P",
       "expiry": "Oct 16",
-      "vol_ratio": 0.67,
+      "vol_ratio": 0.7,
       "atr_pct": 0.99,
       "points": -5,
       "breakdown": {
@@ -73,8 +73,8 @@
     },
     {
       "label": "MRUT (IWM)",
-      "price": 280.04998779296875,
-      "chg": -0.6809282616669354,
+      "price": 280.0199890136719,
+      "chg": -0.6915672584279386,
       "bias": "BEAR",
       "conf": 67,
       "iv": 12.1,
@@ -82,7 +82,7 @@
       "strategy": "Bear Put Spread",
       "strikes": "B$280P / S$274P",
       "expiry": "Oct 16",
-      "vol_ratio": 1.03,
+      "vol_ratio": 1.07,
       "atr_pct": 1.3,
       "points": -3,
       "breakdown": {

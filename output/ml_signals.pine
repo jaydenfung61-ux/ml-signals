@@ -1,5 +1,5 @@
 //@version=6
-indicator("ML Signals — 2026-09-28 (Midday)", overlay=true)
+indicator("ML Signals — 2026-09-28 (Close)", overlay=true)
 
 if barstate.islast
     t = table.new(position.top_right, 9, 5,
@@ -17,8 +17,8 @@ if barstate.islast
     table.cell(t, 8, 0, "Expiry", text_color=color.yellow, bgcolor=color.new(color.black,20), text_size=size.small)
 
     table.cell(t, 0, 1, "SPY", text_color=color.white, bgcolor=color.new(color.navy,30))
-    table.cell(t, 1, 1, "$765.55", text_color=color.white)
-    table.cell(t, 2, 1, "-0.75%", text_color=color.red)
+    table.cell(t, 1, 1, "$765.61", text_color=color.white)
+    table.cell(t, 2, 1, "-0.74%", text_color=color.red)
     table.cell(t, 3, 1, "BULL", text_color=color.white, bgcolor=color.new(color.green,20))
     table.cell(t, 4, 1, "67% (3/7)", text_color=color.green)
     table.cell(t, 5, 1, "11.1%  IVR 29", text_color=color.green)
@@ -37,8 +37,8 @@ if barstate.islast
     table.cell(t, 8, 2, "Oct 16", text_color=color.yellow)
 
     table.cell(t, 0, 3, "DJX (DIA)", text_color=color.white, bgcolor=color.new(color.navy,30))
-    table.cell(t, 1, 3, "$514.09", text_color=color.white)
-    table.cell(t, 2, 3, "-0.66%", text_color=color.red)
+    table.cell(t, 1, 3, "$514.02", text_color=color.white)
+    table.cell(t, 2, 3, "-0.67%", text_color=color.red)
     table.cell(t, 3, 3, "BEAR", text_color=color.white, bgcolor=color.new(color.red,20))
     table.cell(t, 4, 3, "78% (-5/7)", text_color=color.green)
     table.cell(t, 5, 3, "11.7%  IVR 35", text_color=color.green)
@@ -47,8 +47,8 @@ if barstate.islast
     table.cell(t, 8, 3, "Oct 16", text_color=color.yellow)
 
     table.cell(t, 0, 4, "MRUT (IWM)", text_color=color.white, bgcolor=color.new(color.navy,30))
-    table.cell(t, 1, 4, "$280.05", text_color=color.white)
-    table.cell(t, 2, 4, "-0.68%", text_color=color.red)
+    table.cell(t, 1, 4, "$280.02", text_color=color.white)
+    table.cell(t, 2, 4, "-0.69%", text_color=color.red)
     table.cell(t, 3, 4, "BEAR", text_color=color.white, bgcolor=color.new(color.red,20))
     table.cell(t, 4, 4, "67% (-3/7)", text_color=color.green)
     table.cell(t, 5, 4, "12.1%  IVR 9", text_color=color.green)
