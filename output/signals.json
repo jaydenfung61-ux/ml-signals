@@ -1,5 +1,98 @@
 {
-  "date": "2026-10-07",
-  "run": "Close",
-  "signals": []
+  "date": "2026-10-08",
+  "run": "Midday",
+  "signals": [
+    {
+      "label": "SPY",
+      "price": 773.0399780273438,
+      "chg": -0.5378133389958739,
+      "bias": "BULL",
+      "conf": 78,
+      "iv": 10.2,
+      "ivr": 22,
+      "strategy": "Bull Call Spread",
+      "strikes": "B$773C / S$788C",
+      "expiry": "Oct 23",
+      "vol_ratio": 0.61,
+      "atr_pct": 0.88,
+      "points": 5,
+      "breakdown": {
+        "price_vs_ema20": true,
+        "price_vs_ema50": true,
+        "ema20_vs_ema50": true,
+        "momentum_5bar": true,
+        "volume_above_avg": false,
+        "atr_calm": true
+      }
+    },
+    {
+      "label": "QQQ",
+      "price": 746.0700073242188,
+      "chg": -1.5388031944200131,
+      "bias": "BULL",
+      "conf": 82,
+      "iv": 16.0,
+      "ivr": 21,
+      "strategy": "Bull Call Spread",
+      "strikes": "B$746C / S$766C",
+      "expiry": "Oct 23",
+      "vol_ratio": 1.12,
+      "atr_pct": 1.31,
+      "points": 7,
+      "breakdown": {
+        "price_vs_ema20": true,
+        "price_vs_ema50": true,
+        "ema20_vs_ema50": true,
+        "momentum_5bar": true,
+        "volume_above_avg": true,
+        "atr_calm": true
+      }
+    },
+    {
+      "label": "DJX (DIA)",
+      "price": 511.2250061035156,
+      "chg": 0.04011919186164281,
+      "bias": "BEAR",
+      "conf": 67,
+      "iv": 9.9,
+      "ivr": 20,
+      "strategy": "Bear Put Spread",
+      "strikes": "B$511P / S$502P",
+      "expiry": "Oct 23",
+      "vol_ratio": 0.89,
+      "atr_pct": 0.93,
+      "points": -3,
+      "breakdown": {
+        "price_vs_ema20": false,
+        "price_vs_ema50": false,
+        "ema20_vs_ema50": false,
+        "momentum_5bar": true,
+        "volume_above_avg": false,
+        "atr_calm": true
+      }
+    },
+    {
+      "label": "MRUT (IWM)",
+      "price": 277.42999267578125,
+      "chg": -0.09723425256772389,
+      "bias": "BEAR",
+      "conf": 67,
+      "iv": 11.1,
+      "ivr": 2,
+      "strategy": "Bear Put Spread",
+      "strikes": "B$277P / S$270P",
+      "expiry": "Oct 23",
+      "vol_ratio": 1.17,
+      "atr_pct": 1.34,
+      "points": -3,
+      "breakdown": {
+        "price_vs_ema20": false,
+        "price_vs_ema50": false,
+        "ema20_vs_ema50": false,
+        "momentum_5bar": false,
+        "volume_above_avg": true,
+        "atr_calm": true
+      }
+    }
+  ]
 }
