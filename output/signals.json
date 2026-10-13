@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "run": "Midday",
+  "run": "Close",
   "signals": [
     {
       "label": "SPY",
@@ -13,7 +13,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$778C / S$790C",
       "expiry": "Oct 30",
-      "vol_ratio": 0.42,
+      "vol_ratio": 0.43,
       "atr_pct": 0.8,
       "points": 5,
       "breakdown": {
@@ -59,7 +59,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$518C / S$526C",
       "expiry": "Oct 30",
-      "vol_ratio": 0.8,
+      "vol_ratio": 0.85,
       "atr_pct": 0.88,
       "points": 1,
       "breakdown": {
