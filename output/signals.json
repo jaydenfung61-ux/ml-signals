@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "run": "Midday",
+  "run": "Close",
   "signals": [
     {
       "label": "SPY",
@@ -13,7 +13,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$770C / S$785C",
       "expiry": "Oct 30",
-      "vol_ratio": 1.29,
+      "vol_ratio": 1.31,
       "atr_pct": 0.83,
       "points": 1,
       "breakdown": {
@@ -36,7 +36,7 @@
       "strategy": "Bull Call Spread",
       "strikes": "B$729C / S$749C",
       "expiry": "Oct 30",
-      "vol_ratio": 1.46,
+      "vol_ratio": 1.5,
       "atr_pct": 1.23,
       "points": 1,
       "breakdown": {
@@ -59,7 +59,7 @@
       "strategy": "Bear Put Spread",
       "strikes": "B$516P / S$508P",
       "expiry": "Oct 30",
-      "vol_ratio": 1.11,
+      "vol_ratio": 1.14,
       "atr_pct": 0.96,
       "points": -1,
       "breakdown": {
@@ -82,7 +82,7 @@
       "strategy": "Bear Put Spread",
       "strikes": "B$271P / S$264P",
       "expiry": "Oct 30",
-      "vol_ratio": 1.47,
+      "vol_ratio": 1.49,
       "atr_pct": 1.35,
       "points": -3,
       "breakdown": {
