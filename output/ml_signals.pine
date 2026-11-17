@@ -1,8 +1,8 @@
 //@version=6
-indicator("ML Signals — 2026-11-16 (Midday)", overlay=true)
+indicator("ML Signals — 2026-11-16 (Close)", overlay=true)
 
 if barstate.islast
-    t = table.new(position.top_right, 9, 5,
+    t = table.new(position.top_right, 9, 1,
          border_width=1, border_color=color.new(color.white,70),
          frame_width=1, frame_color=color.new(color.white,50))
 
@@ -15,43 +15,3 @@ if barstate.islast
     table.cell(t, 6, 0, "Strategy", text_color=color.yellow, bgcolor=color.new(color.black,20), text_size=size.small)
     table.cell(t, 7, 0, "Strikes (B/S)", text_color=color.yellow, bgcolor=color.new(color.black,20), text_size=size.small)
     table.cell(t, 8, 0, "Expiry", text_color=color.yellow, bgcolor=color.new(color.black,20), text_size=size.small)
-
-    table.cell(t, 0, 1, "SPY", text_color=color.white, bgcolor=color.new(color.navy,30))
-    table.cell(t, 1, 1, "$739.95", text_color=color.white)
-    table.cell(t, 2, 1, "-1.91%", text_color=color.red)
-    table.cell(t, 3, 1, "BEAR", text_color=color.white, bgcolor=color.new(color.red,20))
-    table.cell(t, 4, 1, "72% (-4/7)", text_color=color.green)
-    table.cell(t, 5, 1, "23.2%  IVR 100", text_color=color.red)
-    table.cell(t, 6, 1, "Bear Call Spread", text_color=color.lime)
-    table.cell(t, 7, 1, "S$761C / B$776C", text_color=color.white)
-    table.cell(t, 8, 1, "Dec 4", text_color=color.yellow)
-
-    table.cell(t, 0, 2, "QQQ", text_color=color.white, bgcolor=color.new(color.navy,30))
-    table.cell(t, 1, 2, "$661.75", text_color=color.white)
-    table.cell(t, 2, 2, "-2.67%", text_color=color.red)
-    table.cell(t, 3, 2, "BEAR", text_color=color.white, bgcolor=color.new(color.red,20))
-    table.cell(t, 4, 2, "82% (-6/7)", text_color=color.green)
-    table.cell(t, 5, 2, "36.5%  IVR 99", text_color=color.red)
-    table.cell(t, 6, 2, "Bear Call Spread", text_color=color.lime)
-    table.cell(t, 7, 2, "S$691C / B$716C", text_color=color.white)
-    table.cell(t, 8, 2, "Dec 4", text_color=color.yellow)
-
-    table.cell(t, 0, 3, "DJX (DIA)", text_color=color.white, bgcolor=color.new(color.navy,30))
-    table.cell(t, 1, 3, "$515.68", text_color=color.white)
-    table.cell(t, 2, 3, "-1.43%", text_color=color.red)
-    table.cell(t, 3, 3, "BEAR", text_color=color.white, bgcolor=color.new(color.red,20))
-    table.cell(t, 4, 3, "72% (-4/7)", text_color=color.green)
-    table.cell(t, 5, 3, "21.4%  IVR 100", text_color=color.red)
-    table.cell(t, 6, 3, "Bear Call Spread", text_color=color.lime)
-    table.cell(t, 7, 3, "S$529C / B$539C", text_color=color.white)
-    table.cell(t, 8, 3, "Dec 4", text_color=color.yellow)
-
-    table.cell(t, 0, 4, "MRUT (IWM)", text_color=color.white, bgcolor=color.new(color.navy,30))
-    table.cell(t, 1, 4, "$272.94", text_color=color.white)
-    table.cell(t, 2, 4, "-1.66%", text_color=color.red)
-    table.cell(t, 3, 4, "BEAR", text_color=color.white, bgcolor=color.new(color.red,20))
-    table.cell(t, 4, 4, "72% (-4/7)", text_color=color.green)
-    table.cell(t, 5, 4, "25.9%  IVR 96", text_color=color.red)
-    table.cell(t, 6, 4, "Bear Call Spread", text_color=color.lime)
-    table.cell(t, 7, 4, "S$282C / B$287C", text_color=color.white)
-    table.cell(t, 8, 4, "Dec 4", text_color=color.yellow)
