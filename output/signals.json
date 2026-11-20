@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "run": "Midday",
+  "run": "Close",
   "signals": [
     {
       "label": "SPY",
@@ -12,8 +12,8 @@
       "ivr": 100,
       "strategy": "Bear Call Spread",
       "strikes": "S$737C / B$752C",
-      "expiry": "Dec 4",
-      "vol_ratio": 1.39,
+      "expiry": "Dec 11",
+      "vol_ratio": 1.45,
       "atr_pct": 2.05,
       "points": -4,
       "breakdown": {
@@ -35,8 +35,8 @@
       "ivr": 96,
       "strategy": "Bear Call Spread",
       "strikes": "S$673C / B$693C",
-      "expiry": "Dec 4",
-      "vol_ratio": 1.33,
+      "expiry": "Dec 11",
+      "vol_ratio": 1.36,
       "atr_pct": 3.06,
       "points": -5,
       "breakdown": {
@@ -58,7 +58,7 @@
       "ivr": 100,
       "strategy": "Bear Call Spread",
       "strikes": "S$505C / B$515C",
-      "expiry": "Dec 4",
+      "expiry": "Dec 11",
       "vol_ratio": 1.17,
       "atr_pct": 1.88,
       "points": -4,
@@ -81,9 +81,9 @@
       "ivr": 100,
       "strategy": "Bear Call Spread",
       "strikes": "S$273C / B$278C",
-      "expiry": "Dec 4",
-      "vol_ratio": 1.26,
-      "atr_pct": 2.24,
+      "expiry": "Dec 11",
+      "vol_ratio": 1.28,
+      "atr_pct": 2.23,
       "points": -4,
       "breakdown": {
         "price_vs_ema20": false,
