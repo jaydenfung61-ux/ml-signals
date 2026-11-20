@@ -1,5 +1,98 @@
 {
-  "date": "2026-11-19",
-  "run": "Close",
-  "signals": []
+  "date": "2026-11-20",
+  "run": "Midday",
+  "signals": [
+    {
+      "label": "SPY",
+      "price": 690.8699951171875,
+      "chg": -3.4922542040482507,
+      "bias": "BEAR",
+      "conf": 72,
+      "iv": 26.3,
+      "ivr": 100,
+      "strategy": "Bear Call Spread",
+      "strikes": "S$713C / B$733C",
+      "expiry": "Dec 11",
+      "vol_ratio": 2.36,
+      "atr_pct": 2.33,
+      "points": -4,
+      "breakdown": {
+        "price_vs_ema20": false,
+        "price_vs_ema50": false,
+        "ema20_vs_ema50": false,
+        "momentum_5bar": false,
+        "volume_above_avg": true,
+        "atr_calm": false
+      }
+    },
+    {
+      "label": "QQQ",
+      "price": 608.4500122070312,
+      "chg": -5.67251132747022,
+      "bias": "BEAR",
+      "conf": 78,
+      "iv": 40.5,
+      "ivr": 100,
+      "strategy": "Bear Call Spread",
+      "strikes": "S$638C / B$663C",
+      "expiry": "Dec 11",
+      "vol_ratio": 2.23,
+      "atr_pct": 3.47,
+      "points": -5,
+      "breakdown": {
+        "price_vs_ema20": false,
+        "price_vs_ema50": false,
+        "ema20_vs_ema50": false,
+        "momentum_5bar": false,
+        "volume_above_avg": true,
+        "atr_calm": false
+      }
+    },
+    {
+      "label": "DJX (DIA)",
+      "price": 481.2099914550781,
+      "chg": -1.9519584594328343,
+      "bias": "BEAR",
+      "conf": 72,
+      "iv": 23.3,
+      "ivr": 100,
+      "strategy": "Bear Call Spread",
+      "strikes": "S$495C / B$505C",
+      "expiry": "Dec 11",
+      "vol_ratio": 1.42,
+      "atr_pct": 2.06,
+      "points": -4,
+      "breakdown": {
+        "price_vs_ema20": false,
+        "price_vs_ema50": false,
+        "ema20_vs_ema50": false,
+        "momentum_5bar": false,
+        "volume_above_avg": true,
+        "atr_calm": false
+      }
+    },
+    {
+      "label": "MRUT (IWM)",
+      "price": 257.0400085449219,
+      "chg": -2.7174296580915525,
+      "bias": "BEAR",
+      "conf": 72,
+      "iv": 28.2,
+      "ivr": 100,
+      "strategy": "Bear Call Spread",
+      "strikes": "S$266C / B$271C",
+      "expiry": "Dec 11",
+      "vol_ratio": 2.02,
+      "atr_pct": 2.44,
+      "points": -4,
+      "breakdown": {
+        "price_vs_ema20": false,
+        "price_vs_ema50": false,
+        "ema20_vs_ema50": false,
+        "momentum_5bar": false,
+        "volume_above_avg": true,
+        "atr_calm": false
+      }
+    }
+  ]
 }
