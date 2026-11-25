@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "run": "Midday",
+  "run": "Close",
   "signals": [
     {
       "label": "SPY",
@@ -13,7 +13,7 @@
       "strategy": "Bear Call Spread",
       "strikes": "S$747C / B$767C",
       "expiry": "Dec 11",
-      "vol_ratio": 1.01,
+      "vol_ratio": 1.02,
       "atr_pct": 2.46,
       "points": -4,
       "breakdown": {
@@ -36,7 +36,7 @@
       "strategy": "Bear Call Spread",
       "strikes": "S$675C / B$705C",
       "expiry": "Dec 11",
-      "vol_ratio": 0.92,
+      "vol_ratio": 0.94,
       "atr_pct": 3.82,
       "points": -7,
       "breakdown": {
@@ -59,7 +59,7 @@
       "strategy": "Bear Call Spread",
       "strikes": "S$516C / B$531C",
       "expiry": "Dec 11",
-      "vol_ratio": 0.96,
+      "vol_ratio": 0.98,
       "atr_pct": 2.02,
       "points": -6,
       "breakdown": {
@@ -82,7 +82,7 @@
       "strategy": "Bear Call Spread",
       "strikes": "S$277C / B$287C",
       "expiry": "Dec 11",
-      "vol_ratio": 1.05,
+      "vol_ratio": 1.09,
       "atr_pct": 2.47,
       "points": -4,
       "breakdown": {
